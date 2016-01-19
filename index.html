@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小米官网——小米手机、红米手机、小米电视官方正品专卖网站</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="common.js"></script>
+</head>
+<body>
+<div class="topbar">
+    <div class="container">
+        <div class="topbar-nav fl">
+            <ul>
+                <li><a href="#">小米网</a></li>
+                <li><a href="#">MIUI</a></li>
+                <li><a href="#">米聊</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">多看阅读</a></li>
+                <li><a href="#">云服务</a></li>
+                <li><a href="#">小米网移动版</a></li>
+                <li><a href="#">问题反馈</a></li>
+                <li><a href="#">Select Region</a></li>
+            </ul>
+        </div>
+        <div class="user fr">
+            <div class="login"><a href="#">登录</a></div>
+            <div class="reg"><a href="#">注册</a></div>
+            <div class="shopcar">
+                <a href="#" ><i class="iconfont"></i>&nbsp;购物车(0)</a>
+            </div>
+            <div class="shopcar-box">
+                <div class="shopcar-item">
+                    购物车中还没有商品，赶紧选购吧！
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var shopcar = document.querySelector('.shopcar'),
+        shopcarBox = document.querySelector('.shopcar-box'),
+        topbarNavItems = document.querySelectorAll(".topbarNavItem");
+    shopcar.onmouseover = function(){
+        this.style.backgroundColor = '#fff';
+        shopcarBox.style.display = 'block';
+        shopcarBox.style.height = 0;
+        startMove(shopcarBox,{"height":100})
+    };
+    shopcar.onmouseout = function(){
+        this.style.backgroundColor = '';
+        shopcarBox.style.display = 'none';
+    }
+</script>
+<div class="header">
+    <div class="container clearfix">
+        <div class="navbar">
+            <img class="fl" src="img/logo.png">
+            <div class="navbar-sidenav fl">
+                <ul class="sidenav">
+                    <li class="sidenav-item">手机 平板 电话卡<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">电视 盒子<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">路由器 智能硬件<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">移动电源 插线板<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">耳机 音响<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">电池 存储卡<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">保护套 后盖<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">贴膜 其他配件<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">米兔 服装<i class="iconfont fr"></i></li>
+                    <li class="sidenav-item">箱包 其他周边<i class="iconfont fr"></i></li>
+                </ul>
+                <div class="sidenav-hot">
+                    <div class="sidenav-sub sub-col-3">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-2">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-3">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-2">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                    <div class="sidenav-sub sub-col-1">
+                        <div class="sidenav-sub-col fl">
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span>
+                            </div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                            <div class="sidenav-hot-item">
+                                <img src="img/minote.jpg" class="sub-item-img" alt="minote"/>
+                                <span class="sub-item-title">小米note</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-nav fl">
+                <ul>
+                    <li><a href="#" class="navbar-nav-item">小米手机</a></li>
+                    <li><a href="#" class="navbar-nav-item">红米</a></li>
+                    <li><a href="#" class="navbar-nav-item">平板</a></li>
+                    <li><a href="#" class="navbar-nav-item">电视 · 盒子</a></li>
+                    <li><a href="#" class="navbar-nav-item">路由器</a></li>
+                    <li><a href="#" class="navbar-nav-item">智能硬件</a></li>
+                    <li><a href="#" class="navbar-nav-item">服务</a></li>
+                    <li><a href="#" class="navbar-nav-item">社区</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="#">
+                    <input type="text" class="search-text fl"/>
+                    <input type="submit" style="font-size: 20px; font-weight: bold;" class="search-btn fl iconfont" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+(function(){
+	var sidenavItems = document.querySelectorAll('.sidenav-item'),
+	    sidenavSub = document.querySelectorAll('.sidenav-sub');
+	for(var i = 0, len = sidenavItems.length; i < len; i++){
+	    sidenavItems[i].index = i;
+	    sidenavItems[i].onmouseover = function(){
+	        var curIndex = this.index;
+	        sidenavSub[curIndex].style.display = "block";
+	        this.onmouseout = function(){
+	        	sidenavSub[curIndex].style.display = 'none';
+	        	sidenavSub[curIndex].onmouseover =function(){
+	        		this.style.display = 'block';
+	        	}
+	        	sidenavSub[curIndex].onmouseout =function(){
+	        		this.style.display = 'none';
+	        	}
+	        }
+	    }
+	}
+})()
+
+    
+</script>
+<div class="hotSelling container">
+	<div class="banner">
+		<div class="viewport clearfix">
+		    <div class="slide"><a href="#"><img src="img/banner/1.jpg"></a></div>
+		    <div class="slide"><a href="#"><img src="img/banner/2.jpg"></a></div>
+		    <div class="slide"><a href="#"><img src="img/banner/3.jpg"></a></div>
+		    <div class="slide"><a href="#"><img src="img/banner/4.jpg"></a></div>
+		    <div class="slide"><a href="#"><img src="img/banner/5.jpg"></a></div>
+		</div>
+		<div class="controller">
+			<div class="controller-arrow">
+				<div class="arrow-next"></div>
+				<div class="arrow-prev"></div>
+			</div>
+			<div class="controller-pointer">
+				<div class="controller-dot"></div>
+				<div class="controller-dot"></div>
+				<div class="controller-dot"></div>
+				<div class="controller-dot"></div>
+				<div class="controller-dot"></div>
+			</div>
+		</div>
+	</div>
+    <div class="hero-pro">
+        <div class="hero-sub fl">
+            <div class="hero-sub-item"><a href="#" >电信专场</a></div>
+            <div class="hero-sub-item left"><a href="#" >企业团购</a></div>
+            <div class="hero-sub-item left"><a href="#" >小米官翻</a></div>
+            <div class="hero-sub-item top"><a href="#" >小米移动</a></div>
+            <div class="hero-sub-item top left"><a href="#" >以旧换新</a></div>
+            <div class="hero-sub-item top left"><a href="#" >话费充值</a></div>
+        </div>
+        <ul class="fl">
+            <li class="hero-pro-item hero-pro-item-first fl"><a href="#"><img src="img/hero1.jpg"></a></li>
+            <li class="hero-pro-item fl"><a href="#"><img src="img/hero2.jpg"></a></li>
+            <li class="hero-pro-item fl"><a href="#"><img src="img/hero3.jpg"></a></li>
+        </ul>
+    </div>
+    <div class="star container">
+        <h3 class="star-title">小米明星单品</h3>
+        <ul class="star-item-list">
+            <li class="star-item">
+                <a href="#"><img src="img/star.jpg"></a>
+                <h4 class="star-item-title">小米手机4</h4>
+                <div class="star-item-desc">工艺和手感超乎想象</div>
+                <div class="star-item-price">1299元起</div>
+            </li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+            <li class="star-item"></li>
+        </ul>
+    </div>
+</div>
+<script>
+(function(){
+	var slides = document.querySelectorAll('.slide'),
+		prev = document.querySelector('.arrow-prev'),
+		next = document.querySelector('.arrow-next'),
+		controllerDot = document.querySelectorAll('.controller-dot'),
+		banner = document.querySelector('.banner'),
+		pos = 0;
+
+	slides[0].style.opacity = 1;
+	controllerDot[0].style.backgroundColor = "rgba(255,255,255,0.4)";
+
+	for (var i = controllerDot.length - 1; i >= 0; i--) {
+		controllerDot[i].index = i;
+		controllerDot[i].onclick = function(){
+			bannerTo(this.index);
+		}
+	}
+	next.onclick = function(){
+		autoBanner();
+	};
+	prev.onclick = function(){
+		var index = pos - 1;
+		index === -1 ? index = 4 : null;
+		bannerTo(index);
+		pos = index;
+	};
+	var timer = setInterval(function(){
+		autoBanner();
+	},2000);
+	banner.onmouseover = function(){
+		clearInterval(timer);
+	};
+	banner.onmouseout = function(){
+		timer = setInterval(function(){
+			autoBanner();
+		},2000)
+	};
+	function autoBanner(){
+		var index = pos + 1;
+		index === 5 ? index = 0 : null;
+		bannerTo(index);
+		pos = index;
+	}
+	function bannerTo(index){
+		startMove(slides[pos],{"opacity":0});
+		startMove(slides[index],{"opacity":100});
+		// slides[pos].style.opacity = 0;
+		// slides[index].style.opacity = 1;
+		controllerDot[pos].style.backgroundColor = "rgba(0,0,0,0.4)";
+		controllerDot[index].style.backgroundColor = "rgba(255,255,255,0.4)";
+		pos = index;
+	}
+
+})()
+
+</script>
+<div class="main"></div>
+</body>
+</html>
