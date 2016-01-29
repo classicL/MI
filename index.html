@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>小米官网——小米手机、红米手机、小米电视官方正品专卖网站1111</title>
     <link rel="stylesheet" href="style.css"/>
-    <script src="common.js"></script>
 </head>
 <body>
 <div class="topbar">
@@ -36,21 +35,6 @@
         </div>
     </div>
 </div>
-<script>
-    var shopcar = document.querySelector('.shopcar'),
-        shopcarBox = document.querySelector('.shopcar-box'),
-        topbarNavItems = document.querySelectorAll(".topbarNavItem");
-    shopcar.onmouseover = function(){
-        this.style.backgroundColor = '#fff';
-        shopcarBox.style.display = 'block';
-        shopcarBox.style.height = 0;
-        startMove(shopcarBox,{"height":100})
-    };
-    shopcar.onmouseout = function(){
-        this.style.backgroundColor = '';
-        shopcarBox.style.display = 'none';
-    }
-</script>
 <div class="header">
     <div class="container clearfix">
         <div class="navbar">
@@ -406,31 +390,6 @@
         </div>
     </div>
 </div>
-<script>
-
-(function(){
-	var sidenavItems = document.querySelectorAll('.sidenav-item'),
-	    sidenavSub = document.querySelectorAll('.sidenav-sub');
-	for(var i = 0, len = sidenavItems.length; i < len; i++){
-	    sidenavItems[i].index = i;
-	    sidenavItems[i].onmouseover = function(){
-	        var curIndex = this.index;
-	        sidenavSub[curIndex].style.display = "block";
-            sidenavItems[curIndex].onmouseout = function(){
-	        	sidenavSub[curIndex].style.display = 'none';
-	        	sidenavSub[curIndex].onmouseover =function(){
-	        		this.style.display = 'block';
-	        	};
-	        	sidenavSub[curIndex].onmouseout =function(){
-	        		this.style.display = 'none';
-	        	}
-	        }
-	    }
-	}
-})()
-
-    
-</script>
 <div class="hotSelling container">
 	<div class="banner">
 		<div class="viewport clearfix">
@@ -539,119 +498,358 @@
         </div>
     </div>
 </div>
-<script>
-(function(){
-	var slides = document.querySelectorAll('.slide'),
-		prev = document.querySelector('.arrow-prev'),
-		next = document.querySelector('.arrow-next'),
-		controllerDot = document.querySelectorAll('.controller-dot'),
-		banner = document.querySelector('.banner'),
-		pos = 0;
-
-	slides[0].style.opacity = 1;
-	controllerDot[0].style.backgroundColor = "rgba(255,255,255,0.4)";
-
-	for (var i = controllerDot.length - 1; i >= 0; i--) {
-		controllerDot[i].index = i;
-		controllerDot[i].onclick = function(){
-			bannerTo(this.index);
-		}
-	}
-	next.onclick = function(){
-		autoBanner();
-	};
-	prev.onclick = function(){
-		var index = pos - 1;
-		index === -1 ? index = 4 : null;
-		bannerTo(index);
-		pos = index;
-	};
-	var bannerTimer = setInterval(function(){
-		autoBanner();
-	},2000);
-	banner.onmouseover = function(){
-		clearInterval(bannerTimer);
-	};
-	banner.onmouseout = function(){
-		bannerTimer = setInterval(function(){
-			autoBanner();
-		},2000)
-	};
-	function autoBanner(){
-		var index = pos + 1;
-		index === 5 ? index = 0 : null;
-		bannerTo(index);
-		pos = index;
-	}
-	function bannerTo(index){
-		startMove(slides[pos],{"opacity":0});
-		startMove(slides[index],{"opacity":100});
-		controllerDot[pos].style.backgroundColor = "rgba(0,0,0,0.4)";
-		controllerDot[index].style.backgroundColor = "rgba(255,255,255,0.4)";
-		pos = index;
-	}
-
-    var starPrev = document.querySelector('.star-prev'),
-        starNext = document.querySelector('.star-next'),
-        starItemList = document.querySelector(".star-item-list"),
-        star = document.querySelector('.star'),
-        flag = true;
-    console.log(starPrev);
-    starPrev.onclick = function(){
-        if(!flag){
-            startMove(starItemList,{"left":0});
-            flag = !flag;
-            this.style.opacity = 0.5;
-            starNext.style.opacity = 1;
-            this.style.cursor = 'auto';
-            starNext.style.cursor = 'pointer';
-        }
-    };
-    starNext.onclick = function(){
-        if(flag){
-            startMove(starItemList,{"left":-1240});
-            flag = !flag;
-            this.style.opacity = 0.5;
-            starPrev.style.opacity = 1;
-            this.style.cursor = 'auto';
-            starPrev.style.cursor = 'pointer';
-        }
-    };
-
-    star.onmouseover = function(){
-        clearInterval(starTimer);
-    };
-    star.onmouseout = function(){
-        starTimer = setInterval(function(){
-            starAuto();
-        },5000);
-    };
-    var starTimer = setInterval(function(){
-        starAuto()
-    },5000);
-
-    function starAuto(){
-        if(flag){
-            startMove(starItemList,{"left":-1240});
-            flag = !flag;
-            starNext.style.opacity = 0.5;
-            starPrev.style.opacity = 1;
-            starNext.style.cursor = 'auto';
-            starPrev.style.cursor = 'pointer';
-        }else{
-            startMove(starItemList,{"left":0});
-            flag = !flag;
-            starPrev.style.opacity = 0.5;
-            starNext.style.opacity = 1;
-            starPrev.style.cursor = 'auto';
-            starNext.style.cursor = 'pointer';
-        }
-    }
-})()
-
-</script>
-<div class="main">
-
+<div class="main clearfix">
+    <div class="container">
+        <div class="main-box clearfix">
+            <h3 class="main-box-title">智能硬件</h3>
+            <div class="main-box-left fl">
+                <div class="main-left-big"><a href="#"><img src="img/mainLeftBig.jpg" alt=""/></a></div>
+            </div>
+            <div class="main-box-right fl">
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-box clearfix">
+            <h3 class="main-box-title">智能硬件</h3>
+            <div class="main-box-left fl">
+                <div class="main-left-big"><a href="#"><img src="img/mainLeftBig.jpg" alt=""/></a></div>
+            </div>
+            <div class="main-box-right fl">
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-big">
+                    <a href="#"><img class="figure-img" src="img/mainRightBig.jpg" alt=""/></a>
+                    <a class="title" href="#">小米体重秤</a>
+                    <div class="desc">高精度压力传感器 ｜ 手机管理全家健康</div>
+                    <div class="price">99元</div>
+                </div>
+                <div class="main-right-small">
+                    <a href="#" class="title-s">金属钥匙扣</a>
+                    <div class="price-s">19元</div>
+                    <a href="#"><img class="figure-img-s" src="img/mainRightSmall.jpg" alt=""/></a>
+                </div>
+                <div class="main-right-small">
+                    <a href="#" class="title-s">金属钥匙扣</a>
+                    <div class="price-s">19元</div>
+                    <a href="#"><img class="figure-img-s" src="img/mainRightSmall.jpg" alt=""/></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-content container">
+            <h3 class="main-content-title">内容</h3>
+            <div class="main-content-item fl">
+                <h4 class="main-content-item-title">图书</h4>
+                <ul class="item-list">
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div>
+                    </li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                </ul>
+                <div class="xm-pager-wrapper">
+                    <ul class="xm-pager clearfix">
+                        <li class="pager pager-active"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                    </ul>
+                </div>
+                <div class="pager-np">
+                    <div class="pager-next"><i class="iconfont"></i></div>
+                    <div class="pager-prev"><i class="iconfont"></i></div>
+                </div>
+            </div>
+            <div class="main-content-item fl">
+                <h4 class="main-content-item-title">图书</h4>
+                <ul class="item-list">
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div>
+                    </li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                </ul>
+                <div class="xm-pager-wrapper">
+                    <ul class="xm-pager clearfix">
+                        <li class="pager pager-active"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                    </ul>
+                </div>
+                <div class="pager-np">
+                    <div class="pager-next"><i class="iconfont"></i></div>
+                    <div class="pager-prev"><i class="iconfont"></i></div>
+                </div>
+            </div>
+            <div class="main-content-item fl">
+                <h4 class="main-content-item-title">图书</h4>
+                <ul class="item-list">
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div>
+                    </li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                </ul>
+                <div class="xm-pager-wrapper">
+                    <ul class="xm-pager clearfix">
+                        <li class="pager pager-active"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                    </ul>
+                </div>
+                <div class="pager-np">
+                    <div class="pager-next"><i class="iconfont"></i></div>
+                    <div class="pager-prev"><i class="iconfont"></i></div>
+                </div>
+            </div>
+            <div class="main-content-item main-content-item-last fl ">
+                <h4 class="main-content-item-title">图书</h4>
+                <ul class="item-list clearfix">
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div>
+                    </li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                    <li>
+                        <div class="name"><a href="#">那片星空那片海</a></div>
+                        <div class="desc"><a href="#">超人气作家桐华全新梦幻爱情小说</a></div>
+                        <div class="price"><a href="#">7.99元</a></div>
+                        <div class="figure-img"><a href="#"><img src="img/content-img.jpg" alt=""/></a></div></li>
+                </ul>
+                <div class="xm-pager-wrapper">
+                    <ul class="xm-pager clearfix">
+                        <li class="pager pager-active"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                        <li class="pager"><span class="dot"></span></li>
+                    </ul>
+                </div>
+                <div class="pager-np">
+                    <div class="pager-next"><i class="iconfont"></i></div>
+                    <div class="pager-prev"><i class="iconfont"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="service container clearfix">
+    <div class="fast-ser">
+        <a class="fast-ser-item fast-ser-item-first" href="#">1小时快修服务</a>
+        <a class="fast-ser-item" href="#">7天无理由退货</a>
+        <a class="fast-ser-item" href="#">15天免费换货</a>
+        <a class="fast-ser-item" href="#">满99包邮</a>
+        <a class="fast-ser-item" href="#">520余家售后网点</a>
+    </div>
+    <div class="service-list fl">
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">帮助中心</dt>
+            <dd class="service-list-item-content"><a href="#">购物指南</a></dd>
+            <dd class="service-list-item-content"><a href="#">支付方式</a></dd>
+            <dd class="service-list-item-content"><a href="#">配送方式</a></dd>
+        </dl>
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">服务支持</dt>
+            <dd class="service-list-item-content"><a href="#">售后政策</a></dd>
+            <dd class="service-list-item-content"><a href="#">自助服务</a></dd>
+            <dd class="service-list-item-content"><a href="#">相关下载</a></dd>
+        </dl>
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">小米之家</dt>
+            <dd class="service-list-item-content"><a href="#">小米之家</a></dd>
+            <dd class="service-list-item-content"><a href="#">服务网点</a></dd>
+            <dd class="service-list-item-content"><a href="#">预约服务</a></dd>
+        </dl>
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">关于小米</dt>
+            <dd class="service-list-item-content"><a href="#">了解小米</a></dd>
+            <dd class="service-list-item-content"><a href="#">加入小米</a></dd>
+            <dd class="service-list-item-content"><a href="#">联系我们</a></dd>
+        </dl>
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">关注我们</dt>
+            <dd class="service-list-item-content"><a href="#">新浪微博</a></dd>
+            <dd class="service-list-item-content"><a href="#">小米部落</a></dd>
+            <dd class="service-list-item-content"><a href="#">官方微信</a></dd>
+        </dl>
+        <dl class="service-list-item">
+            <dt class="service-list-item-title">特色服务</dt>
+            <dd class="service-list-item-content"><a href="#">F码通道</a></dd>
+            <dd class="service-list-item-content"><a href="#">小米移动</a></dd>
+            <dd class="service-list-item-content"><a href="#">防伪查询</a></dd>
+        </dl>
+    </div>
+    <div class="service-contact fl">
+        <span class="phone">400-100-5678</span><br>
+        <span>周一至周日&nbsp;8:00-18:00</span><br>
+        <span>（仅收市话费）</span>
+        <div class="online-service">24小时在线客服</div>
+    </div>
+</div>
+<div class="footer clearfix">
+    <div class="container">
+        <div class="footer-logo fl"></div>
+        <div class="footer-info fl">
+            <p class="footer-link">
+                <a href="#">小米网</a><span class="sep">|</span>
+                <a href="#">MIUI</a><span class="sep">|</span>
+                <a href="#">米聊</a><span class="sep">|</span>
+                <a href="#">多看商城</a><span class="sep">|</span>
+                <a href="#">小米路由器</a><span class="sep">|</span>
+                <a href="#">视频电话</a><span class="sep">|</span>
+                <a href="#">小米后院</a><span class="sep">|</span>
+                <a href="#">小米天猫店</a><span class="sep">|</span>
+                <a href="#">小米淘宝直营店</a><span class="sep">|</span>
+                <a href="#">小米网盟</a><span class="sep">|</span>
+                <a href="#">问题反馈</a><span class="sep">|</span>
+                <a href="#">Select Region</a>
+            </p>
+            <p class="footer-num">©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备1101080212535号 京网文[2014]0059-0009号 违法和不良信息举报电话：185-0130-1238</p>
+        </div>
+        <div class="footer-img fr"><img src="img/footer1.png" class="f-img" alt=""/><img src="img/footer2.png" class="f-img" alt=""/><img src="img/footer3.png" class="f-img" alt=""/></div>
+    </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
