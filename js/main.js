@@ -51,6 +51,16 @@
         controllerDot[i].onclick = function(){
             bannerTo(this.index);
         }
+        controllerDot[i].onmouseover = function(){
+        	if(this.index !== pos){
+        		this.style.backgroundColor = "rgba(255,255,255,0.4)";
+        	}
+        }
+        controllerDot[i].onmouseout = function(){
+        	if(this.index !== pos){
+        		this.style.backgroundColor = "#757575";
+        	}
+        }
     }
     next.onclick = function(){
         autoBanner();
