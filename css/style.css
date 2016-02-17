@@ -254,7 +254,7 @@ body {
     top: 180px;
     width: 41px;
     height: 69px;
-    background-image: url('img/icon-slides.png');
+    background-image: url('../img/icon-slides.png');
     cursor: pointer;
 }
 .arrow-next {
@@ -697,7 +697,7 @@ body {
 .footer-logo {
     width: 36px;
     height: 36px;
-    background-image: url("img/logo-mini.png");
+    background-image: url("../img/logo-mini.png");
     margin-right: 10px;
 }
 .footer-link a{
