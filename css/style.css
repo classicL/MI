@@ -33,6 +33,7 @@ img {
 }
 body {
     font-family: "Microsoft Yahei";
+    min-width: 1226px;
 }
 /*topbar*/
 .topbar {
